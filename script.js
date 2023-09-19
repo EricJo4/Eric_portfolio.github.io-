@@ -10,7 +10,7 @@ const projects = [
         name: "Cyclistic Case Study in Tableau",
         description: "Cyclistic Case Study dashboard created with Tableau.\nUsing multiple chart layouts, displayed the comparison between casual and membership by week and month.\nAverage duration of riding of the both types was also highlighted.",
         img: "Tableau_Cyclistic.PNG",
-        hyperLink: "https//public.tableau.com/app/profile/hyeonjun.jo/viz/CaseStudy1Cyclistic_16584555926410/Dashboard1"
+        hyperLink: "https://public.tableau.com/app/profile/hyeonjun.jo/viz/CaseStudy1Cyclistic_16584555926410/Dashboard1"
     },
 
     {
