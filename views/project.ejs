@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+<body>
+
+
+  <%-include('partials/navbar', {page: '/project'}) %>
+  <div class="container mx-auto">
+
+    <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold"><%=set.name%></h1>
+                <p class="py-6"></p>
+            </div>
+        </div>
+        
+
+    </div>
+    <br>
+
+    <section id="portfolio">
+
+        <div class="project">
+            <article id = image>
+                <img class ="w-full rounded-lg" src="/<%= set.img %>" alt="/<%= set.img %>">
+            </article>
+    
+            
+            <div class ="column2">
+
+                <article id = "description" class="py-5">
+                    <p><%= set.description %></p>
+                </article>
+    
+                <article id = "hyperLink">
+                    <a href="<%= set.hyperLink %>">
+                        <button>In detail</button>
+                    </a>
+                </article>
+            </div>
+        </div>
+        <!-- Add more project entries as needed -->
+      </section>
+
+  </div>
+
+</body>
+</html>
