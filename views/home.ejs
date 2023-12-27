@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+<%-include('partials/navbar', {page: '/'}) %>
+
+<div class="container mx-auto">
+    <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content flex-col lg:flex-row">
+          <img src="profile image.jpeg" class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+            <h1 class="text-5xl font-bold">Hi! thanks for visiting my website</h1>
+            <p class="py-6">My name is Eric Jo. I'm currently studying Computer Programming and Analysis at Seneca Polytechnic seeking to be a Full-stack developer.</p>
+            <a href="/portfolio">
+              <button class="btn btn-primary">View portfolio</button>
+            </a>
+          </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+
+      <footer class="footer p-10 bg-base-100 text-base-content text-2xl">
+        <nav class="navbar-center hidden sm:flex">
+          <header class="footer-title">Contact</header> 
+        </nav> 
+        <a class="link link-hover" href="https://github.com/EricJo4/MyGitHub"><img src="/GitHub.png" alt="GitHub" /></a>
+          <a class="link link-hover" href="https://www.linkedin.com/in/hyeonjun-eric-jo/"><img src="/LinkedIn.png" alt="LinkedIn" /></a>
+        <a class="link link-hover">eric.jo4345@gmail.com</a>
+      </footer>  
+</div>   
+</body>
+</html>

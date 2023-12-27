@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <%-include('partials/navbar', {page: '/projects'}) %>
+  <div class="container mx-auto">
+
+    <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold"><%= language %></h1>
+                <p class="py-6">Browse entire projects</p>
+                <br>Click a language to filter: 
+              <br>
+              <a href="/projects" class="btn btn-primary btn-xs">ALL</a> 
+              <a href="/projects?theme=R" class="btn btn-primary btn-xs">R</a> 
+              <a href="/projects?theme=Tableau" class="btn btn-primary btn-xs">Tableau</a> 
+              <a href="/projects?theme=Python" class="btn btn-primary btn-xs">Python</a></p>
+            </div>
+        </div>
+        
+
+    </div>
+    <br>
+    <div class = "overflow-x-auto overflow-y-hidden">
+        <table class="table tabel-zebra">
+          <tbody>
+            <tr>
+              <% sets.forEach(set =>{ %>
+                <tr>
+                  <td>
+                    <div class="avatar">
+                      <div class="w-24 rounded">
+                        <img src="<%= set.img %>" />
+                      </div>
+                    </div>
+                  </td>
+                  <td><%= set.name %> | <a href="/projects?theme=<%= set.theme %>" class = "btn  mt-2 btn-xs"><%= set.theme %></a></td>
+                  <td><a href="/project/<%= set.id %>" class="btn btn-xs">details</a></td>
+                </tr>
+              <% }); %>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+  </div>
+</body>
+</html>

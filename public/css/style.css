@@ -1,0 +1,51 @@
+
+.column1 {
+    flex: 50%;
+}
+
+.column2 {
+    padding: 10px;
+    flex: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+}
+
+section {
+    padding: 20px;
+}
+
+.project {
+    width: 1400px;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img{
+    width: 700px;
+    height: 500px;
+    border-radius: 5px 5px 5px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 20px 20px 0px 20px;
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    border: 2px solid grey;
+}
+
+button:hover{
+    background-color: grey;
+    color: white;
+}

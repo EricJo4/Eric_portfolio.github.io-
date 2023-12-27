@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+  <%-include('partials/navbar', {page: '/portfolio'}) %>
+  <div class="container mx-auto">
+
+    <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Portfolio</h1>
+                <p class="py-6"></p>
+                <p>
+                  <div class="drawer">
+                      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                      <div class="drawer-content">
+                        <!-- Page content here -->
+                        <label for="my-drawer" class="btn btn-primary drawer-button">View a project</label>
+                      </div> 
+                      <div class="drawer-side">
+                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                          <!-- Sidebar content here -->
+                          <% sets.forEach(set => { %>
+                            <li><a onclick="showPortfolio(<%= JSON.stringify(set) %>)"><%=set.name%></a></li>
+                          <% }) %>
+                        </ul>
+                      </div>
+                  </div>
+              </p>
+            </div>
+        </div>
+        
+
+    </div>
+    <br>
+
+  <section id="portfolio">
+
+    <div class="project">
+        <article id = image>
+            <!-- Dynamically create image here -->
+        </article>
+
+        
+        <div class ="column2">
+            <article id = "title" class="text-5xl font-bold">
+                <!-- Dynamically create title here -->
+            </article>
+        <br>
+            <article id = "description" class="py-5">
+                <!-- Dynamically create description here -->
+            </article>
+
+            <article id = "hyperLink">
+                <!-- Dynamically create hyper link here -->
+            </article>
+        </div>
+    </div>
+    <!-- Add more project entries as needed -->
+  </section>
+</div>
+</body>
+</html>
